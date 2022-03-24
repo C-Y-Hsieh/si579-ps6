@@ -1,7 +1,7 @@
-import './SaveList.css';
+import './ShowSynonymsButton.css';
 
-const ShowRhymesButton = () => {
-    return <button className='show-rhymes-button'>Show Rhymes</button>
+const ShowSynonymsButton = () => {
+    return <button className='show-synonyms-button'>Show Synonyms</button>
 };
 
-export default ShowRhymesButton;
+export default ShowSynonymsButton;
