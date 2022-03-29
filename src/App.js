@@ -19,6 +19,9 @@ function App() {
 
             <main className="container">
                 <h1>Rhyme Finder (579 Problem Set 6)</h1>
+                <div className="code-link">
+                    <a href="https://github.com/C-Y-Hsieh/si579-ps6/tree/master" target="_blank">See the source code here</a>
+                </div>
                 <SaveList saveWords={save}/>
                 <SearchBar search={setInput} outputDescription={setOutputDescription} setLoading={setLoading}/>
                 <ResultList inputValue={input} save={setSave} outputDescription={outputDescription} loading={loading}/>
