@@ -1,8 +1,5 @@
 import './SearchBar.css';
 import { useState } from "react";
-//import ShowRhymesButton from "./ShowRhymesButton";
-import ShowSynonymsButton from "./ShowSynonymsButton";
-import ResultList from "./ResultList";
 import { useEffect} from "react";
 
 
@@ -87,7 +84,9 @@ const SearchBar = (props) => {
     function printRhyme(data){
         const groupedRhyme = groupBy(data, 'numSyllables');
         //console.log('data', data);
-        //console.log('groupBy:', groupedRhyme);
+        console.log('groupBy:', groupedRhyme);
+        
+
         for (let syllables in groupedRhyme) {
             //console.log("syllables:", syllables);
             //console.log("typeof syllables:", typeof Number(syllables));
@@ -131,10 +130,6 @@ const SearchBar = (props) => {
 
     useEffect((input)=>{
         const url = getDatamuseRhymeUrl(input);
-        {
-            // not yet resolved!!!!!!!!!!!!!!!!!!
-            ResultList.innerHTML = `...loading`;
-        }
         datamuseRequest(url, printRhyme);
 
         setInput('');
